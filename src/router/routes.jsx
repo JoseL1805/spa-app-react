@@ -30,7 +30,7 @@ import { LoginPage } from '../auth/';
           element: <HeroPage/>,
         },
         {
-          path: "/*",
+          path: "/",
           element: <Navigate to="/marvel/" replace />,
         },
       ]
