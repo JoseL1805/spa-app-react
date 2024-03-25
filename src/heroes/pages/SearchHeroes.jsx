@@ -20,10 +20,7 @@ export const SearchHeroes = () => {
     const handleOnSearchSubmit = (e) => {
         e.preventDefault()
         if( searchText.trim() === "") return  navigate(``);
-
         navigate(`?q=${searchText}`);
-
-        console.log(q)
     }
 
     return (
