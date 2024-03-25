@@ -3,15 +3,17 @@ import { createBrowserRouter, Navigate } from "react-router-dom";
 import { App } from '../App';
 import { MarvelPage , DcPage, SearchHeroes, HeroPage } from './../heroes/';
 import { LoginPage } from '../auth/';
+import { PrivateRoute } from "./PrivateRoute";
+import { PublicRoute } from "./PublicRoute";
   
  export const router = createBrowserRouter([
     {
       path: "/login",
-      element: <LoginPage/>,
+      element: <PublicRoute> <LoginPage/> </PublicRoute> ,
     },
     {
       path: "/",
-      element: <App/>,
+      element: <PrivateRoute> <App/> </PrivateRoute>,
       children : [
         {
           path: "/marvel/",
